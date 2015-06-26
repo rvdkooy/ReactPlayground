@@ -10,7 +10,7 @@ gulp.task("compilejs", function() {
         context: __dirname + "/clientApp",
         entry: {
         	app: "./app",
-        	vender: ["react"]
+        	vender: ["react", "jquery"]
         },
         output: {
             path: __dirname + "/server/public/javascripts",
