@@ -1,11 +1,12 @@
 var jQuery = window.jQuery = window.$ = require("jquery");
+var config = require("../config.js");
 
 module.exports.getImages = function() {
     return jQuery.ajax({
-            url: "https://api.imgur.com/3/gallery/hot/viral/0.json",
+            url: config.imgur.viralUrl,
             type: "GET",
             headers:{
-                "Authorization": "Client-ID 92a5675bf7ad55f"
+                "Authorization": "Client-ID " + config.imgur.clientId
             }
         });
 };
