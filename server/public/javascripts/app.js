@@ -36,17 +36,12 @@ webpackJsonp([0],{
 				url: "https://api.imgur.com/3/gallery/hot/viral/0.json",
 				type: "GET",
 				headers: {
-					"Authorization": "Client-ID 92a5675bf7ad55f"
+					"Authorization": "Client-ID <myid>"
 				}
 			}).then(function (res) {
-
 				var sample = _.sample(res.data, 10);
 				_this.setState({ images: sample });
 			});
-
-			// jQuery.get(").then(function(res) {
-			// 		this.setState({ imageUrl: res });
-			// 	});
 		},
 		render: function render() {
 
