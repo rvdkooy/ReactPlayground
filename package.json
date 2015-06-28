@@ -33,11 +33,21 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "node-libs-browser": "~0.5.2",
-    "webpack": "~1.9.12",
+    "babel-core": "~5.6.14",
+    "babel-loader": "~5.2.2",
+    "es5-shim": "^4.1.7",
     "gulp": "~3.9.0",
     "gulp-util": "~3.0.6",
-    "babel-core": "~5.6.14",
-    "babel-loader": "~5.2.2"
+    "jasmine-core": "^2.3.4",
+    "jquery-mockjax": "^2.0.1",
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-webpack": "^1.5.1",
+    "node-libs-browser": "~0.5.2",
+    "phantomjs": "^1.9.17",
+    "react-testutils-additions": "^0.13.3",
+    "webpack": "~1.9.12"
   }
 }

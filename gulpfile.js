@@ -27,7 +27,6 @@ gulp.task("compilejs", function() {
         }
     };
 
-
 	webpack(webpackConfig, function (err, stats) {
             if (err) throw new gulpUtil.PluginError("webpack", err);
 

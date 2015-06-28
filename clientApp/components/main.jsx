@@ -17,7 +17,7 @@ var Main = React.createClass({
 		var images = this.state.images.map((i, index) => {
 			return (<img key={index} style={ { width: "400px" } } src={i.link} />);
 		});
-
+        
 		return (<div>
                     <div>
                         <button onClick={ this._refresh }>refresh</button>                   

@@ -93,7 +93,7 @@ webpackJsonp([0],{
 
 	module.exports.imgur = {
 	    "viralUrl": "https://api.imgur.com/3/gallery/hot/viral/0.json",
-	    "clientId": "<yourclientid>"
+	    "clientId": "640ef34a0011ff1"
 	};
 
 /***/ },
