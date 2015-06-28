@@ -1,31 +1,31 @@
 var React = require("react");
-var jQuery = window.jQuery = window.$ = require("jquery");
-var _ = require("lodash");
+var imagesApi = require("../api/imagesApi");
+var imagesStore = require("../stores/imagesStore");
+var imagesActions = require("../actionCreators/imagesActions");
+var Reflux = require("reflux");
 
 var Main = React.createClass({
-	
-	getInitialState() {
-		return { images: []};
+	mixins: [Reflux.connect(imagesStore,"images")],
+    componentDidMount() {
+        imagesActions.load();
 	},
-	componentDidMount() {
-		jQuery.ajax({
-  			url: "https://api.imgur.com/3/gallery/hot/viral/0.json",
-  			type: "GET",
-  			headers:{
-  				"Authorization": "Client-ID <myid>"
-  			}
-  		}).then((res) => {
-  			var sample = _.sample(res.data, 10);
-  			this.setState({ images: sample });
-  		});
-	},
+    _refresh() {
+        imagesActions.load();
+    },
 	render() {
 		
 		var images = this.state.images.map((i, index) => {
 			return (<img key={index} style={ { width: "400px" } } src={i.link} />);
 		});
 
-		return (<div>{ images }</div>);
+		return (<div>
+                    <div>
+                        <button onClick={ this._refresh }>refresh</button>                   
+                    </div>
+                    <div>
+                        { images }
+                    </div>
+                </div>);
 	}
 });
 

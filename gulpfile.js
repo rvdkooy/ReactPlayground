@@ -39,5 +39,8 @@ gulp.task("compilejs", function() {
         });
 });
 
+gulp.task("watchClientApp", function() {
+    gulp.watch("./clientApp/**/*.js*", ["compilejs"]);
+});
 
-gulp.task("default", ["compilejs"]);
+gulp.task("default", ["compilejs", "watchClientApp"]);
